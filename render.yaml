@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: kbdss-motor-reglas
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn kbdss.infrastructure.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        sync: false        # Se configura manualmente en el dashboard de Render
+      - key: PYTHON_VERSION
+        value: "3.11.0"

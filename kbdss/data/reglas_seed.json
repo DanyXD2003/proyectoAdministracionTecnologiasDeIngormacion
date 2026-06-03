@@ -1,0 +1,76 @@
+[
+  {
+    "id": "r001",
+    "area": "ventas",
+    "condiciones": [
+      {"campo": "consultas_precio", "operador": "gte", "valor": 3},
+      {"campo": "volumen_potencial", "operador": "gte", "valor": 5000}
+    ],
+    "accion": "Ofrecer descuento escalonado del 5-10%",
+    "justificacion": "Cliente con alta intención de compra y volumen significativo. El descuento escalonado reduce fricción sin sacrificar margen.",
+    "confianza": 0.87,
+    "version": 1,
+    "autor": "Ana García",
+    "activa": true,
+    "fecha_creacion": "2026-01-15T09:00:00Z"
+  },
+  {
+    "id": "r002",
+    "area": "ventas",
+    "condiciones": [
+      {"campo": "dias_sin_compra", "operador": "gte", "valor": 30},
+      {"campo": "tipo_cliente", "operador": "eq", "valor": "corporativo"}
+    ],
+    "accion": "Iniciar contacto proactivo con propuesta personalizada",
+    "justificacion": "Cliente corporativo inactivo por más de un mes. La reactivación proactiva tiene 3x más éxito que esperar contacto entrante.",
+    "confianza": 0.81,
+    "version": 1,
+    "autor": "Carlos Mejía",
+    "activa": true,
+    "fecha_creacion": "2026-01-15T09:00:00Z"
+  },
+  {
+    "id": "r003",
+    "area": "ventas",
+    "condiciones": [
+      {"campo": "consultas_precio", "operador": "gte", "valor": 3},
+      {"campo": "tipo_cliente", "operador": "eq", "valor": "corporativo"}
+    ],
+    "accion": "Escalar a ejecutivo senior para cierre",
+    "justificacion": "Cliente corporativo con señales de compra activas. El cierre con ejecutivo senior aumenta la tasa de conversión en un 40%.",
+    "confianza": 0.74,
+    "version": 1,
+    "autor": "Ana García",
+    "activa": true,
+    "fecha_creacion": "2026-01-15T09:00:00Z"
+  },
+  {
+    "id": "r004",
+    "area": "ventas",
+    "condiciones": [
+      {"campo": "volumen_potencial", "operador": "lt", "valor": 1000},
+      {"campo": "consultas_precio", "operador": "lte", "valor": 1}
+    ],
+    "accion": "Enviar catálogo digital y agendar seguimiento en 7 días",
+    "justificacion": "Cliente en etapa exploratoria con bajo volumen potencial. Inversión de tiempo alta vs. retorno esperado — seguimiento diferido es más eficiente.",
+    "confianza": 0.69,
+    "version": 1,
+    "autor": "Carlos Mejía",
+    "activa": true,
+    "fecha_creacion": "2026-01-15T09:00:00Z"
+  },
+  {
+    "id": "r005",
+    "area": "ventas",
+    "condiciones": [
+      {"campo": "dias_sin_compra", "operador": "gte", "valor": 90}
+    ],
+    "accion": "Activar protocolo de recuperación: llamada directa + oferta especial",
+    "justificacion": "Cliente inactivo por más de 3 meses. Sin intervención activa, la probabilidad de recuperación cae a menos del 20%.",
+    "confianza": 0.91,
+    "version": 1,
+    "autor": "Roberto Paz",
+    "activa": true,
+    "fecha_creacion": "2026-01-15T09:00:00Z"
+  }
+]
