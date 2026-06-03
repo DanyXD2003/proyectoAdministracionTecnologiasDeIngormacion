@@ -9,7 +9,7 @@ load_dotenv()
 
 from fastapi import FastAPI
 from adapters.api.routes import router
-from infrastructure.database import init_pool, create_tables, seed_reglas, _pool
+import infrastructure.database as db
 
 app = FastAPI(
     title="KBDSS — Motor de Reglas Nexus-Corp",
@@ -22,13 +22,13 @@ app.include_router(router)
 
 @app.on_event("startup")
 def startup():
-    init_pool()
-    conn = _pool.getconn()
+    db.init_pool()
+    conn = db._pool.getconn()
     try:
-        create_tables(conn)
-        seed_reglas(conn)
+        db.create_tables(conn)
+        db.seed_reglas(conn)
     finally:
-        _pool.putconn(conn)
+        db._pool.putconn(conn)
 
 
 @app.get("/health")
