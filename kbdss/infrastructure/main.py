@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from adapters.api.routes import router
 import infrastructure.database as db
 
@@ -15,6 +16,15 @@ app = FastAPI(
     title="KBDSS — Motor de Reglas Nexus-Corp",
     description="Knowledge-Based Decision Support System para logística y ventas",
     version="1.0.0",
+)
+
+# TODO: reemplaza "*" por la URL del frontend en producción
+# ej: allow_origins=["https://kbdss-frontend.onrender.com"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(router)
