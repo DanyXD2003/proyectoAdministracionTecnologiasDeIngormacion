@@ -13,8 +13,8 @@
 |---|---|
 | 🌐 Backend (API REST) | `https://proyectoadministraciontecnologiasdeingor.onrender.com` |
 | 📖 Documentación interactiva | `https://proyectoadministraciontecnologiasdeingor.onrender.com/docs` |
-| 🖥️ Frontend (SPA) | `[INSERTAR URL DEL FRONTEND EN RENDER]` |
-| 📦 Repositorio de código | `[INSERTAR URL DEL REPOSITORIO]` |
+| 🖥️ Frontend (SPA) | `https://proyectoadministraciontecnologiasdeingor-61f7.onrender.com` |
+| 📦 Repositorio de código | `https://github.com/DanyXD2003/proyectoAdministracionTecnologiasDeIngormacion.git` |
 
 ---
 
