@@ -22,7 +22,7 @@ app = FastAPI(
 # ej: allow_origins=["https://kbdss-frontend.onrender.com"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://proyectoadministraciontecnologiasdeingor-61f7.onrender.com"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
